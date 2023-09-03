@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <!-- Tailwind CSS DEV -->
+    <link rel="stylesheet" href="dist/output.css">
+    <!-- Tailwind CSS Prod -->
+    <link rel="stylesheet" href="build.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Image CSS -->
+    <link rel="stylesheet" href="assets/css/imghover/css/imagehover.min.css">
+    
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Digital.in</title>
+</head>
+<body>
+
+    <header id="header" class="sticky md:-top-4 top-0 w-full z-50 bg-opacity-50 md:pt-4 h-[100px]" x-data="{ navOpen : false }">
+        <div x-show="navOpen" x-transition.duration.1000 class="absolute z-40 w-full h-screen bg-black text-white flex justify-center items-center">
+            <ul class="text-white flex flex-col items-center gap-12">
+                <li class="nav-item"><a href="#hero">Home</a></li>
+                <li class="nav-item"><a href="#product">Producut</a></li>
+                <li class="nav-item"><a href="#exploration">Exploration</a></li>
+                <li class="nav-item"><a href="#contacts">Contacts</a></li>
+                <button @click="navOpen = ! navOpen"><i class="ri-close-line text-2xl"></i></button>
+            </ul>
+        </div>
+        <nav class="h-[100px] px-4 md:px-0" >
+            <div class="flex md:justify-center justify-between py-4">
+                <div class="md:hidden"></div>
+                <ul class="flex md:gap-16 items-center text-white" style="font-size: 20px;">
+                    <li class="nav-item hover:text-zinc-400 transition-colors"><a href="#hero">Home</a></li>
+                    <li class="nav-item hover:text-zinc-400 transition-colors"><a href="#product">Produk</a></li>
+                    <li><a href="" class=" font-bold ">Digital.in</a></li>
+                    <li class="nav-item hover:text-zinc-400 transition-colors"><a href="#template">Portofolio</a></li>
+                    <li class="nav-item hover:text-zinc-400 transition-colors"><a href="#contact">Contacts</a></li>
+                </ul>
+                <button @click="navOpen = true" class="md:hidden z-50 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M13 13.5H3C2.73478 13.5 2.48043 13.6054 2.29289 13.7929C2.10536 13.9804 2 14.2348 2 14.5C2 14.7652 2.10536 15.0196 2.29289 15.2071C2.48043 15.3946 2.73478 15.5 3 15.5H13C13.2652 15.5 13.5196 15.3946 13.7071 15.2071C13.8946 15.0196 14 14.7652 14 14.5C14 14.2348 13.8946 13.9804 13.7071 13.7929C13.5196 13.6054 13.2652 13.5 13 13.5ZM21 8.5H3C2.73478 8.5 2.48043 8.60536 2.29289 8.79289C2.10536 8.98043 2 9.23478 2 9.5C2 9.76522 2.10536 10.0196 2.29289 10.2071C2.48043 10.3946 2.73478 10.5 3 10.5H21C21.2652 10.5 21.5196 10.3946 21.7071 10.2071C21.8946 10.0196 22 9.76522 22 9.5C22 9.23478 21.8946 8.98043 21.7071 8.79289C21.5196 8.60536 21.2652 8.5 21 8.5Z" fill="white"/>
+                    </svg>
+                </button>
+               
+                
+            </div>
+        </nav>
+
+
+    </header>
+    
+    <main id="main">
+        <section class="hero md:py-[100px] py-14 min-h-full md:min-h-[620px] bg-no-repeat bg-cover bg-bottom" id="hero">
+            <div class="md:px-[100px] px-[20px] flex flex-col items-center">
+                <h1 class="flex text-center font-bold flex-col items-center text-2xl md:text-[64px] md:leading-normal">All in One
+                    <span class="flex">Digital Marketing Solution
+                        <img src="assets/img/Subtract.svg" class="md:w-[40px] w-4">
+                    </span>
+                    
+                </h1> 
+                <p class="text-xs max-w-[250px] md:max-w-none text-center text-white md:text-2xl md:mt-8 mt-4">Fokuslah ke proses bisnis anda, biarkan kami mengurus pemasarannya!</p>
+                <a href="" class="bg-white text-black py-4 px-8 mt-12 md:mt-24 rounded-full flex items-center gap-2 transition-transform hover:shadow-2xl shadow-gray-300">Konsultasi dengan kami <i class="ri-arrow-right-up-line font-black transition-transform"></i></a>
+                
+            </div>
+        </section> 
+        <section class="trust-element py-14 "  id="trust-element">
+            <!-- <h2 class="font-bold text-center text-3xl">Mitra Kami</h2> -->
+            <p class="text-center"></p>
+            <div class="wrapper md:px-[152px] px-10 mt-8">
+                <div class="grid md:grid-cols-4 grid-cols-2 md:gap-8 gap-12 flex-wrap items-center">
+                    <a href="" class="col-span-1 object" data-value="5"><img class="" src="assets/img/its-logo.png" alt=""></a>
+                    <a href="" class="col-span-1 object" data-value="3"><img class="" src="assets/img/its-logo.png" alt=""></a>
+                    <a href="" class="col-span-1 object" data-value="-2"><img class="" src="assets/img/its-logo.png" alt=""></a>
+                    <a href="" class="col-span-1 object" data-value="2"><img class="" src="assets/img/its-logo.png" alt=""></a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="fact md:px-[100px]" id="fact">
+            <div class="description p-16 bg-[#232424] rounded-[40px] mt-5">
+                <h1 class=" text-xl md:text-[64px] leading-tight object" data-value="6">
+                    Taukah kamu bahwa <span>hanya 12% startup yang dapat bertahan hingga tahun ke-10</span>
+                </h1>
+                <p class="mt-10 text-[#7B7B7B] md:text-2xl text-base object" data-value="-4">
+                    Apa penyebab kegagalan itu?
+                </p>
+                <p class="mt-5 md:text-4xl text-[20px] object" data-value="2">
+                    Kurangnya <i>Digital Marketing</i> menjadi salah satu penyebab utama runtuhnya startup tersebut
+                </p>
+            </div>
+        </section>
+
+        <section class="product md:px-[100px] md:mt-24 md:py-[80px] py-[60px] px-4" id="product">
+            <h2 class="text-3xl font-bold">Kami Hadir membantu proses pemasaran anda</h2>
+            <p class="text-xl">
+                Produk yang kami tawarkan
+            </p>
+
+            <div class="wrapper py-20 grid md:grid-cols-3 gap-12 md:gap-4">
+                <div class="card rounded-2xl col-span-1 text-center py-12 px-4 bg-violet-400 ">
+                    <h3 class="text-4xl font-bold">Gold Paket</h3>
+                    <ul class="mt-8 flex flex-col gap-2">
+                        <li>24 Design Feed IG</li>
+                        <hr>
+                        <li>Website Company Profile</li>
+                        <hr>
+                        <li>SEO</li>
+                    </ul>
+                    <div class="price mt-12">
+                        <p class="text-2xl line-through"><i>Rp. 5.000.000</i></p>
+                        <p class="text-5xl font-bold">Rp. 500.000</p>
+                    </div>
+                    <a href="" class="btn block py-4 px-6 bg-violet-800 rounded-2xl mt-24 hover:bg-violet-600 transition-colors">Ambil Paket</a>
+                </div>
+                <div class="card rounded-2xl md:scale-110 col-span-1 text-center py-12 px-4 bg-violet-500 shadow-xl shadow-zinc-600">
+                    <h3 class="text-4xl font-bold">Gold Paket</h3>
+                    <ul class="mt-8 flex flex-col gap-2">
+                        <li>24 Design Feed IG</li>
+                        <hr>
+                        <li>Website Company Profile</li>
+                        <hr>
+                        <li>SEO</li>
+                    </ul>
+                    <div class="price mt-12">
+                        <p class="text-2xl line-through"><i>Rp. 5.000.000</i></p>
+                        <p class="text-5xl font-bold">Rp. 500.000</p>
+                    </div>
+                    <a href="" class="btn block py-4 px-6 bg-violet-800 rounded-2xl mt-24 hover:bg-violet-600 transition-colors">Ambil Paket</a>
+                </div>
+                <div class="card rounded-2xl col-span-1 text-center py-12 px-4 bg-violet-400 ">
+                    <h3 class="text-4xl font-bold">Gold Paket</h3>
+                    <ul class="mt-8 flex flex-col gap-2">
+                        <li>24 Design Feed IG</li>
+                        <hr>
+                        <li>Website Company Profile</li>
+                        <hr>
+                        <li>SEO</li>
+                    </ul>
+                    <div class="price mt-12">
+                        <p class="text-2xl line-through"><i>Rp. 5.000.000</i></p>
+                        <p class="text-5xl font-bold">Rp. 500.000</p>
+                    </div>
+                    <a href="" class="btn block py-4 px-6 bg-violet-800 rounded-2xl mt-24 hover:bg-violet-600 transition-colors">Ambil Paket</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="template lg:px-28 md:py-[80px] py-[60px] px-4" id="template">
+            <div class="container">
+                <div class="template-header flex justify-between items-center">
+                    <div class="flex flex-col">
+                        <h1 class=" max-w-5xl text-4xl lg:text-6xl ">Portofolio kami</h1>
+                        <p class="md:text-xl">Beberapa produk yang turut mendobrak penjualan customer kami</p>
+                    </div>
+                    <a href="template.html" class="btn-template bg-indigo-500 text-white flex items-center font-bold px-4 h-16 rounded-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-10 h-10 duration-300 svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                          </svg>
+                          
+                    </a>
+                </div>
+                <div class="template-wrapper lg:mt-20 mt-4">
+                    <div class="swiper templateSwiper flex py-20 lg:px-32 px-4 items-center">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <figure class="imghvr-slide-up bg-gray-50 rounded-xl">
+                                <img src="assets/img/template-1.jpg" alt="example-image">
+                                <figcaption class="flex flex-col justify-center items-center" style="background-color: #FAFAFA;">
+                                  <p class="font-bold text-xl text-black">Asikin Cafe</p>
+                                  <p class="text-sm text-gray-500">
+                                    sebuah wesbite yang dapat digunakan pelanggan Asikin Cafe untuk transaksi digital serta optimasi SEO yang meningkatkan pelanggan yang berasal dari pencarian browser
+                                  </p>
+                                  
+                                </figcaption>
+                                
+                              </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="imghvr-slide-up bg-gray-50 rounded-xl">
+                                <img src="assets/img/template-2.jpg" alt="example-image">
+                                <figcaption class="flex flex-col justify-center items-center" style="background-color: #FAFAFA;">
+                                  <p class="font-bold text-xl text-black">Company Profile</p>
+                                  <p class="text-sm text-gray-500">
+                                    Cocok untuk digunakan untuk mendeskripsikan perusahaan anda dalam sebuah website moderen
+                                  </p>
+                                  
+                                </figcaption>
+                                
+                              </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="imghvr-slide-up bg-gray-50 rounded-xl">
+                                <img src="assets/img/template-3.jpg" alt="example-image">
+                                <figcaption class="flex flex-col justify-center items-center" style="background-color: #FAFAFA;">
+                                  <p class="font-bold text-xl text-black">Burgir.co</p>
+                                  <p class="text-sm text-gray-500">
+                                    Cocok digunakan untuk mendeskripsikan produk usaha anda dalam sebuah website, akan menambah daya tarik calon pembeli
+                                  </p>
+                                  
+                                </figcaption>
+                                
+                              </figure>
+                          </div>
+        
+                        </div>
+                        <div class="swipper-bottom flex items-center ">
+                            <div class="swiper-button-wrapper flex gap-2 flex-row">
+                                <div class="swiper-button-wrapper flex gap-2 flex-row">
+                                    <div class="swiper-button-prev w-12 h-12 lg:w-20 lg:h-20">
+                                        <svg class="text-white" xmlns="http://www.w3.org/2000/svg" fill="#6366F1" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6366F1" class="w-7 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                                          </svg>                      
+                                    </div>
+                                    <div class="swiper-button-next w-12 h-12 lg:w-20 lg:h-20">
+                                        <svg class="text-white" xmlns="http://www.w3.org/2000/svg" fill="#6366F1" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6366F1" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination 2xl:hidden"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="testimoni md:px-[100px] px-4 md:py-[80px] py-[60px]" id="testimoni">
+            <h1 class=" max-w-5xl text-4xl lg:text-6xl ">Kata Mereka</h1>
+            <p class="text-xl">Testimoni dari customer tentang pelayanan dan produk <span class=" font-bold">Digital.in</span></p>
+            <div class="testimoni mt-12">
+                <div class="swiper testi-slide">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide bg-zinc-800 px-8 py-6 rounded-xl ">
+                        <div class="content flex items-start flex-col text-center">
+                            <div class="text-base tracking-widest text-gray-500">
+                                @NovanIsHere - Rencamasa.id
+                            </div>
+                            <p class="text-justify text-base mt-4 text-black">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ducimus nam, saepe corrupti doloremque vero architecto esse harum!
+                            </p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide bg-zinc-800 px-8 py-6 rounded-xl ">
+                        <div class="content flex items-start flex-col text-center">
+                            <div class="text-base tracking-widest text-gray-500">
+                                @NovanIsHere - Rencamasa.id
+                            </div>
+                            <p class="text-justify text-base mt-4 text-black">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ducimus nam, saepe corrupti doloremque vero architecto esse harum!
+                            </p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide bg-zinc-800 px-8 py-6 rounded-xl ">
+                        <div class="content flex items-start flex-col text-center">
+                            <div class="text-base tracking-widest text-gray-500">
+                                @NovanIsHere - Rencamasa.id
+                            </div>
+                            <p class="text-justify text-base mt-4 text-black">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ducimus nam, saepe corrupti doloremque vero architecto esse harum!
+                            </p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide bg-zinc-800 px-8 py-6 rounded-xl ">
+                        <div class="content flex items-start flex-col text-center">
+                            <div class="text-base tracking-widest text-gray-500">
+                                @NovanIsHere - Rencamasa.id
+                            </div>
+                            <p class="text-justify text-base mt-4 text-black">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ducimus nam, saepe corrupti doloremque vero architecto esse harum!
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </section>
+
+        <section class="contact md:px-[100px] px-4 md:py-[80px] py-[60px]" id="contact">
+            <h1 class=" max-w-5xl text-4xl lg:text-6xl ">Masih Bingung?</h1>
+            <p class="text-xl mt-2">
+               mulai berdiskusi dengan kami mengenai bisnismu!
+            </p>
+            
+            <form action="" class="grid md:grid-cols-2 grid-cols-1 px-4 mt-[100px]">
+                <div class="col-span-1">
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-center gap-4">
+                            <i class="ri-phone-line text-4xl"></i>
+                            <div class="flex flex-col">
+                                <h3><b>Call Me</b></h3>
+                                <p>085156248950</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="ri-mail-line text-4xl"></i>
+                            <div class="flex flex-col">
+                                <h3><b>Email Me</b></h3>
+                                <p>rizkynovan21@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="ri-map-pin-line text-4xl"></i>
+                            <div class="flex flex-col">
+                                <h3><b>Location</b></h3>
+                                <p>Keputih, Surabaya</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-span-1 text-black flex flex-col gap-4 ">
+                    <div class="md:flex gap-4">
+                        <div class="flex flex-col gap-2 md:w-1/2">
+                            <label for="nama">Nama</label>
+                            <input type="text" class="px-4 py-4 rounded-xl text-black" name="nama" id="nama" placeholder="Rizky Novan">
+                        </div>
+                        <div class="flex flex-col gap-2 md:w-1/2">
+                            <label for="nama">Nama</label>
+                            <input type="text" class="px-4 py-4 rounded-xl text-black" name="nama" id="nama" placeholder="rizkynovan21@gmail.com">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="nama">Nama Usaha</label>
+                        <input type="text" class="px-4 py-4 rounded-xl text-black" name="nama" id="nama" placeholder="Digital.in">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="nama">Pesan</label>
+                        <textarea name="" class="px-4 py-4 rounded-xl text-black" id="" cols="30" rows="10"></textarea>
+                    </div>
+
+
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="bg-white text-center text-black py-[50px] px-10 md:px-[100px]" id="contacts">
+        <h2 class="md:text-4xl text-[20px] tracking-widest font-extrabold uppercase text-black">Hit me up for collaboration</h2>
+        <ul class="flex flex-col text-black tracking-widest md:flex-row mt-[60px] md:mt-[84px] gap-8 md:gap-20 flex-wrap items-center justify-center">
+            <li><a href="" class="hover:opacity-75 text-black">DRIBBBLE</a></li>
+            <li><a href="" class="hover:opacity-75 text-black">MEDIUM</a></li>
+            <li><a href="" class="hover:opacity-75 text-black">LINKEDIN</a></li>
+            <li><a href="" class="hover:opacity-75 text-black">EMAIL</a></li>
+            <li><a href="" class="hover:opacity-75 text-black">TELEGRAM</a></li>
+        </ul>
+
+        <hr class="py-[24px] mt-8">
+
+        <a href="" class="text-center mt-12">Copyright ©️ Marka Minwan Team 2023</a>
+    </footer>
+    
+</body>
+
+<script src="assets/js/main.js"></script>
+</html>
